@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our cold plunge range | Barrel Sauna UK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ground:#16261C; --forest-deep:#1F3D28; --forest:#2B5336; --mid:#417C51;
+    --sage:#50795F; --sage-pale:#8fae86; --honey:#C08B41; --honey-l:#D6A868;
+    --tint:#dbe7dd; --tint-l:#eef4ef; --ink:#3A4240; --ink-l:#5C6663;
+    --body-dark:#dfe9df; --veil-body:#e9eee4; --whatsapp:#31D24F;
+    --hairline:rgba(65,124,81,0.30); --rule-soft:rgba(65,124,81,0.12);
+    --shadow:0 10px 30px rgba(22,38,28,0.12);
+    --face:'Raleway', Arial, Helvetica, sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{background:#ffffff;}
+  body{font-family:var(--face);color:var(--ink);font-weight:400;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  a:focus-visible{outline:3px solid var(--honey);outline-offset:3px;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+  .kicker{font-size:12px;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;color:var(--honey);margin-bottom:14px;}
+  h1{font-size:52px;font-weight:700;line-height:1.05;letter-spacing:-1px;color:#ffffff;margin-bottom:16px;}
+  h1 span{color:var(--honey-l);}
+  h2{font-size:36px;font-weight:700;line-height:1.12;letter-spacing:-0.5px;color:var(--ink);margin-bottom:14px;}
+  h2 span{color:var(--honey);}
+  p{max-width:680px;}
+  p.lede{font-size:18px;color:var(--ink-l);}
+  p + p{margin-top:14px;}
+
+  /* hero */
+  .hero{position:relative;min-height:540px;height:66vh;max-height:680px;background:var(--forest-deep);overflow:hidden;display:flex;align-items:flex-end;}
+  .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 48%;}
+  .hero-veil{position:absolute;inset:0;background:linear-gradient(180deg, rgba(22,38,28,0.50) 0%, rgba(22,38,28,0.30) 40%, rgba(22,38,28,0.90) 100%);}
+  .hero-in{position:relative;width:100%;padding-top:48px;padding-bottom:60px;}
+  .hero .logo{position:absolute;top:28px;left:max(24px, calc((100% - 1080px) / 2 + 24px));width:120px;z-index:2;}
+  .hero .dash{width:44px;height:2px;background:var(--honey-l);margin-bottom:14px;}
+  .hero .kicker{color:var(--honey-l);}
+  .hero p.lede{color:var(--veil-body);max-width:600px;}
+
+  /* sections */
+  section{padding:72px 0;}
+  section.white{background:#ffffff;}
+  section.intro{padding-bottom:0;}
+  section.intro .wrap{border-bottom:1px solid var(--rule-soft);padding-bottom:56px;}
+  section.dark{background:var(--forest-deep);color:var(--body-dark);}
+  section.dark .kicker{color:var(--honey-l);}
+  section.dark h2{color:#ffffff;}
+  section.dark h2 span{color:var(--honey-l);}
+  section.dark p.lede{color:var(--body-dark);}
+
+  /* product */
+  .phead{margin-bottom:36px;}
+  .pgrid{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:start;}
+  .frame{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);background:var(--ground);}
+  .frame img{width:100%;aspect-ratio:5/4;object-fit:cover;}
+  .gallery{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;}
+  .gallery.three{grid-template-columns:repeat(3,1fr);}
+  .gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;box-shadow:var(--shadow);}
+  figcaption{margin-top:9px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--sage);}
+  section.dark figcaption{color:var(--sage-pale);}
+  figure.wide{margin-top:40px;}
+  figure.wide img{width:100%;border-radius:22px;box-shadow:var(--shadow);}
+
+  .spec{background:#ffffff;border:1px solid var(--hairline);border-radius:18px;padding:6px 26px;box-shadow:var(--shadow);}
+  .srow{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--rule-soft);}
+  .srow:last-child{border-bottom:none;}
+  .srow .k{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--sage);padding-top:4px;}
+  .srow .v{font-size:15px;color:var(--ink-l);line-height:1.6;}
+  section.dark .spec{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.14);box-shadow:none;}
+  section.dark .srow{border-color:rgba(255,255,255,0.10);}
+  section.dark .srow .k{color:var(--sage-pale);}
+  section.dark .srow .v{color:var(--body-dark);}
+  ul.ticks{list-style:none;}
+  ul.ticks li{position:relative;padding-left:22px;margin-bottom:5px;}
+  ul.ticks li::before{content:"\2713";position:absolute;left:0;top:0;font-weight:700;color:var(--mid);}
+  section.dark ul.ticks li::before{color:var(--sage-pale);}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;padding-top:2px;}
+  .pills span{display:inline-block;border:1px solid var(--hairline);border-radius:30px;padding:6px 14px;font-size:13px;font-weight:700;color:var(--forest-deep);line-height:1.4;}
+  section.dark .pills span{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.18);color:var(--body-dark);}
+  .fine{margin-top:12px;font-size:13px;color:var(--ink-l);}
+  section.dark .fine{color:var(--sage-pale);}
+
+  /* interlude */
+  section.interlude{background:var(--ground);padding:88px 0;text-align:center;}
+  section.interlude p{margin:0 auto;max-width:760px;color:#ffffff;font-size:30px;font-weight:200;line-height:1.35;}
+  section.interlude p span{color:var(--honey-l);font-weight:400;}
+
+  /* cta */
+  section.cta{text-align:center;}
+  section.cta p{margin:0 auto;}
+  section.cta .kicker{margin-bottom:12px;}
+  .btns{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin:30px 0 56px;}
+  .btn{display:inline-block;background:var(--honey);color:#ffffff;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:16px 38px;border-radius:30px;}
+  .btn.wa{background:var(--whatsapp);}
+  .know{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:left;}
+  .temps{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px;max-width:760px;}
+  .kcard{background:#ffffff;border:1px solid var(--hairline);border-radius:18px;padding:22px 24px;box-shadow:var(--shadow);}
+  .kcard .t{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+  .kcard .s{font-size:14px;color:var(--ink-l);line-height:1.55;}
+
+  /* footer */
+  footer{background:var(--ground);text-align:center;padding:52px 0 44px;}
+  footer .flogo{width:150px;margin:0 auto 18px;}
+  footer .signoff{color:#ffffff;font-size:15px;font-weight:700;margin-bottom:4px;}
+  footer .dom{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--sage-pale);margin-bottom:22px;}
+  footer .sigcard{display:inline-block;background:#ffffff;border-radius:12px;padding:10px;max-width:300px;width:100%;}
+  footer .sigcard img{width:100%;border-radius:8px;}
+
+  @media (max-width:760px){
+    h1{font-size:38px;} h2{font-size:29px;}
+    .hero{min-height:480px;height:auto;}
+    .hero .logo{width:100px;}
+    .pgrid{grid-template-columns:1fr;gap:28px;}
+    .srow{grid-template-columns:1fr;gap:4px;padding:14px 0;}
+    .know{grid-template-columns:1fr;}
+    .gallery.three{grid-template-columns:1fr 1fr;}
+    .temps{grid-template-columns:1fr;}
+    section{padding:56px 0;}
+    section.interlude{padding:64px 0;}
+    section.interlude p{font-size:23px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <img class="hero-img" src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6aa00ecf641597c752ac7d5c.jpg" alt="Stainless steel band on a Thermowood cold plunge">
+  <div class="hero-veil"></div>
+  <img class="logo" src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a159cbca7ceea4e5718f77f.png" alt="Barrel Sauna UK">
+  <div class="wrap hero-in">
+    <div class="dash"></div>
+    <div class="kicker">Handcrafted in Wales</div>
+    <h1>Our cold plunge <span>range</span></h1>
+    <p class="lede">We offer a range of bespoke cold plunges, including our single and double dipper options.</p>
+  </div>
+</header>
+
+<!-- INTRO -->
+<section class="white intro">
+  <div class="wrap">
+    <div class="kicker">Cold plunges</div>
+    <h2>Thermowood construction and <span>quality</span> components</h2>
+    <p class="lede">Our cold plunges are designed with both style and durability in mind.</p>
+    <p>Depending on the model and specification, we can include features such as a matching Thermowood lid, steps, stainless-steel bands, filtration system and chiller unit, giving you a complete cold-water therapy setup.</p>
+    <div class="temps">
+      <div class="kcard"><div class="t">The Single Dipper</div><div class="s">Cold only.</div></div>
+      <div class="kcard"><div class="t">The Double Dipper</div><div class="s">Cold, or hot and cold. Chiller unit, DualTemp unit or wood fired.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SINGLE DIPPER -->
+<section class="white product" id="single">
+  <div class="wrap">
+    <div class="phead">
+      <div class="kicker">Cold only</div>
+      <h2>The Single <span>Dipper</span></h2>
+      <p class="lede">Round single cold plunge. 1 to 2 people, ideally one at a time for full depth immersion.</p>
+    </div>
+    <div class="pgrid">
+      <div class="pmedia">
+        <div class="frame"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6aa11249bfc1456f8c7ad890.jpg" alt="Single Dipper cold plunge in stained Thermowood with lid and timber steps"></div>
+        <div class="gallery">
+          <figure><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a78537488808720193d974d.jpg" alt="Single Dipper with the lid off, showing the insulated interior, bands and step"><figcaption>Insulated interior</figcaption></figure>
+          <figure><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a78538703343f290f705cb7.jpg" alt="Pinewood Single Dipper with lid and timber steps"><figcaption>Pinewood version with timber steps</figcaption></figure>
+        </div>
+      </div>
+      <div class="spec">
+        <div class="srow"><div class="k">Size</div><div class="v">99cm internal diameter, 115cm external. 100.5cm total height, 100cm soaking depth.</div></div>
+        <div class="srow"><div class="k">Temperature</div><div class="v">Cold only. The chiller unit cools to 3 to 5°C.</div></div>
+        <div class="srow"><div class="k">Seat</div><div class="v">Internal seat approx 35cm wide, 30cm high.</div></div>
+        <div class="srow"><div class="k">Timber</div><div class="v">Treated Thermowood, heat dried and thermally modified at 200°C, or Pinewood.</div></div>
+        <div class="srow"><div class="k">Interior</div><div class="v">Stainless steel, or polypropylene in Blackout, Storm Grey, Frost Grey, Glacier Blue or Ice White.</div></div>
+        <div class="srow"><div class="k">Included</div><div class="v">
+          <ul class="ticks">
+            <li>Dual stainless steel tightening bands</li>
+            <li>Drainage, internal base plug and external stainless steel side tap</li>
+            <li>Single stepper</li>
+            <li>Chiller unit installation, where a chiller is fitted</li>
+          </ul>
+        </div></div>
+        <div class="srow"><div class="k">Options</div><div class="v">
+          <div class="pills">
+            <span>Filtration system and chiller unit</span>
+            <span>Handcrafted wooden lid with handles</span>
+            <span>Canopy cover</span>
+            <span>Large double stepper</span>
+            <span>LED internal spotlight</span>
+            <span>Air jet system</span>
+            <span>Insulated floor base</span>
+            <span>Timber stain</span>
+          </div>
+          <div class="fine">LED spotlight and air jet system are for polypropylene interiors.</div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOUBLE DIPPER -->
+<section class="dark product" id="double">
+  <div class="wrap">
+    <div class="phead">
+      <div class="kicker">Cold, or hot and cold</div>
+      <h2>The Double <span>Dipper</span></h2>
+      <p class="lede">Oval two seater with two fixed seats, for residential or commercial use.</p>
+    </div>
+    <div class="pgrid">
+      <div class="pmedia">
+        <div class="frame"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a7853935a64f2b5673614fd.png" alt="Wood fired Double Dipper in Thermowood with integrated stove"></div>
+        <div class="gallery three">
+          <figure><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a78539888808720193dd452.png" alt="Double Dipper interior with the two fixed seats"><figcaption>Interior and seating</figcaption></figure>
+          <figure><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6aa5a3adc9a6c7937b60d1bd.jpeg" alt="Electric Double Dipper installed outdoors beside a stone wall"><figcaption>Electric, outdoors</figcaption></figure>
+          <figure><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a78535b03343f290f6fc3ce.jpg" alt="Double Dipper interior fitted with air jets"><figcaption>Air jet system</figcaption></figure>
+        </div>
+      </div>
+      <div class="spec">
+        <div class="srow"><div class="k">Size</div><div class="v">Internal width approx 120cm, external 130cm. Internal length 190cm, external 200cm. Internal height 97cm, external 104cm.</div></div>
+        <div class="srow"><div class="k">Temperature</div><div class="v">Cold with the chiller unit, 3 to 5°C. Hot and cold with the DualTemp unit, 3 to 5°C to 40°C. Or wood fired, with the integrated wood burning stove and chimney.</div></div>
+        <div class="srow"><div class="k">Seats</div><div class="v">Seat height 28cm, width 40cm, backrest 66cm.</div></div>
+        <div class="srow"><div class="k">Water</div><div class="v">800 litres. Dry weight 160kg.</div></div>
+        <div class="srow"><div class="k">Timber</div><div class="v">Thermowood cladding, 22mm thick, heat dried and thermally modified at 200°C.</div></div>
+        <div class="srow"><div class="k">Interior</div><div class="v">Fibreglass with two fixed seats, in Storm Grey, Glacier Blue, Ice White or Blackout.</div></div>
+        <div class="srow"><div class="k">Included</div><div class="v">
+          <ul class="ticks">
+            <li>Curved Thermowood double step</li>
+            <li>Drainage, internal base plug and external stainless steel side tap</li>
+          </ul>
+        </div></div>
+        <div class="srow"><div class="k">Options</div><div class="v">
+          <div class="pills">
+            <span>Filtration system and chiller unit, cools to 3 to 5°C</span>
+            <span>DualTemp unit, hot and cold, 3 to 5°C to 40°C</span>
+            <span>Integrated wood burning stove with chimney</span>
+            <span>Protective wooden housing for the chiller</span>
+            <span>Full body foam insulation</span>
+            <span>Underwater LED spotlight</span>
+            <span>Air jet system</span>
+            <span>Thermo insulated cover</span>
+            <span>Timber stain</span>
+            <span>Bottle holder</span>
+            <span>Floating thermometer</span>
+            <span>Surface skimmer</span>
+          </div>
+        </div></div>
+      </div>
+    </div>
+    <figure class="wide"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a80d425255b571c8ecb3d76.png" alt="Four tubs side by side showing the interior colour options"><figcaption>Interior colour options</figcaption></figure>
+  </div>
+</section>
+
+<!-- INTERLUDE -->
+<section class="interlude">
+  <div class="wrap">
+    <p>As with our saunas, our cold plunges can be <span>customised to suit your space</span> and requirements.</p>
+  </div>
+</section>
+
+<!-- NEXT STEP -->
+<section class="white cta">
+  <div class="wrap">
+    <div class="kicker">Next step</div>
+    <h2>Talk to the <span>team</span></h2>
+    <p class="lede">Pricing will depend on the size and specifications you choose.</p>
+    <div class="btns">
+      <a class="btn" href="https://www.barrelsaunauk.com/book-a-call-back">Book a call back</a>
+      <a class="btn wa" href="https://wa.me/447360274142">Message us on WhatsApp</a>
+    </div>
+    <div class="know">
+      <div class="kcard"><div class="t">Two year warranty</div><div class="s">Two year warranty on all components.</div></div>
+      <div class="kcard"><div class="t">Aftercare support</div><div class="s">Our team is available after delivery.</div></div>
+      <div class="kcard"><div class="t">Electrical connection</div><div class="s">Our team installs the tub and all fittings. The final 220V connection is completed on site by a qualified electrician.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <img class="flogo" src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a159cbca7ceea4e5718f77f.png" alt="Barrel Sauna UK">
+    <div class="signoff">The Barrel Sauna UK Team</div>
+    <div class="dom">barrelsaunauk.com &nbsp;&middot;&nbsp; Handcrafted in Wales</div>
+    <div class="sigcard"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a96e859fac7854efe0a2fdc.jpeg" alt="Barrel Sauna UK business card"></div>
+  </div>
+</footer>
+
+</body>
+</html>
