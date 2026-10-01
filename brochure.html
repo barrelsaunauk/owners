@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barrel Sauna UK Brochure</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ground:#16261C; --forest-deep:#1F3D28; --forest:#2B5336; --mid:#417C51;
+    --sage:#50795F; --sage-pale:#8fae86;
+    --honey:#C08B41; --honey-d:#b07d38; --honey-l:#D6A868;
+    --body-dark:#dfe9df; --veil-body:#e9eee4; --wa:#31D24F;
+    --ink:#3A4240; --ink-l:#5C6663; --tint:#dbe7dd; --tint-l:#eef4ef;
+    --hairline:rgba(65,124,81,0.30); --rule-soft:rgba(65,124,81,0.14);
+    --shadow:0 10px 30px rgba(22,38,28,0.12);
+    --face:'Raleway', Arial, sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{background:#ffffff;}
+  body{font-family:var(--face);color:var(--ink-l);font-weight:400;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;color:var(--honey);margin-bottom:14px;}
+  h2{font-size:38px;font-weight:700;line-height:1.14;letter-spacing:-0.5px;color:var(--forest-deep);margin-bottom:14px;}
+  h2 span{color:var(--honey);}
+  h3{font-size:22px;font-weight:700;color:var(--forest-deep);margin:54px 0 8px;}
+  .lede{font-size:18px;max-width:700px;margin-bottom:34px;}
+  section{padding:80px 0;}
+  section.dark{background:var(--ground);color:var(--body-dark);}
+  section.dark .kicker{color:var(--honey-l);}
+  section.dark h2, section.dark h3{color:#ffffff;}
+  section.dark h2 span{color:var(--honey-l);}
+  section.tint{background:var(--tint-l);}
+  .pill{display:inline-block;background:var(--honey);color:#ffffff;text-decoration:none;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:15px 34px;border-radius:30px;white-space:nowrap;}
+  .pill:hover{background:var(--honey-d);}
+
+  /* emoji disc */
+  .disc{flex:0 0 52px;width:52px;height:52px;border-radius:50%;background:var(--forest);display:flex;align-items:center;justify-content:center;font-size:23px;line-height:1;}
+  .disc.sm{flex:0 0 46px;width:46px;height:46px;font-size:20px;}
+
+  /* hero */
+  .hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#ffffff;
+    background:
+      linear-gradient(90deg, rgba(22,38,28,0.88) 0%, rgba(22,38,28,0.55) 50%, rgba(22,38,28,0.30) 100%),
+      linear-gradient(180deg, rgba(22,38,28,0.45) 0%, rgba(22,38,28,0.10) 38%, rgba(22,38,28,0.90) 100%),
+      url('https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6abe68158807113c2d1d4b01.png') center/cover no-repeat;}
+  .hero .logo{position:absolute;top:28px;left:24px;width:120px;}
+  .hero .inner{padding:130px 0 70px;width:100%;}
+  .hero .dash{width:44px;height:2px;background:var(--honey-l);margin-bottom:14px;}
+  .hero .kicker{color:var(--honey-l);}
+  .hero h1{font-size:56px;font-weight:700;line-height:1.05;letter-spacing:-1px;max-width:760px;margin-bottom:18px;}
+  .hero h1 span{color:var(--honey-l);}
+  .hero p{font-size:18px;color:var(--veil-body);max-width:620px;margin-bottom:28px;}
+
+  /* badge cards */
+  .badges{padding:56px 0 20px;}
+  .bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .bcard{display:flex;align-items:center;gap:16px;background:#ffffff;border-radius:18px;box-shadow:var(--shadow);padding:18px 22px;}
+  .bcard .t{font-size:13px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--forest-deep);line-height:1.4;}
+
+  /* lift blocks */
+  .grid{display:grid;gap:18px;}
+  .g2{grid-template-columns:repeat(2,1fr);}
+  .g3{grid-template-columns:repeat(3,1fr);}
+  .g4{grid-template-columns:repeat(4,1fr);}
+  .block{background:#ffffff;border-radius:18px;box-shadow:var(--shadow);padding:26px 26px 24px;}
+  .block .disc{margin-bottom:16px;}
+  .block .lb{font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);margin-bottom:8px;}
+  .block .hd{font-size:20px;font-weight:700;color:var(--forest-deep);line-height:1.3;margin-bottom:8px;}
+  .block .bd{font-size:15px;color:var(--ink-l);line-height:1.6;}
+  section.dark .block{border:1px solid rgba(255,255,255,0.10);}
+
+  /* pill box rows (emoji or drawing left, caps title, copy) */
+  .pbox{display:flex;align-items:center;gap:22px;background:#ffffff;border-radius:22px;box-shadow:var(--shadow);padding:20px 26px;}
+  .pbox .ico{flex:0 0 96px;display:flex;justify-content:center;}
+  .pbox .ico img{height:62px;width:auto;}
+  .pbox .ti{flex:0 0 170px;font-size:13px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--forest-deep);line-height:1.4;}
+  .pbox .bd{font-size:15px;color:var(--ink-l);line-height:1.6;}
+  .pstack{display:grid;gap:14px;}
+
+  /* labelled image cards */
+  .card{background:#ffffff;border-radius:18px;overflow:hidden;border:1px solid var(--hairline);box-shadow:var(--shadow);align-self:start;}
+  .card img{width:100%;height:auto;}
+  .card .tab{background:var(--forest-deep);border-top:3px solid var(--honey);color:#ffffff;padding:11px 18px;font-size:12px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;}
+  .card .ex{padding:12px 18px 16px;font-size:14px;color:var(--sage);line-height:1.55;}
+
+  /* circle inserts */
+  .circles{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:64px;}
+  .circ{display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;}
+  .circ .ph{width:230px;height:230px;border-radius:50%;border:1px solid var(--hairline);box-shadow:var(--shadow);background-size:cover;background-position:center;}
+  .circ .ph.flag{background-size:240%;background-position:53% 47%;}
+  .circ .cap{font-size:13px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--sage);line-height:1.7;}
+
+  /* split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start;}
+
+  /* interlude band */
+  .interlude{padding:0 0 80px;background:var(--ground);}
+  .inter{border-radius:22px;padding:90px 30px;text-align:center;background:linear-gradient(180deg, rgba(22,38,28,0.62), rgba(22,38,28,0.62)), url('https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a9e0f664ea183e872a18be6.png') center/cover no-repeat;}
+  .inter p{margin:0 auto;max-width:720px;color:#ffffff;font-size:32px;font-weight:200;line-height:1.35;}
+  .inter p span{color:var(--honey-l);font-weight:400;}
+
+  /* details band */
+  .band{position:relative;min-height:440px;display:flex;align-items:center;background:linear-gradient(90deg, rgba(22,38,28,0.88) 0%, rgba(22,38,28,0.58) 46%, rgba(22,38,28,0.80) 100%), url('https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6aa00cb4f44f6ea72fcb18fa.png') center/cover no-repeat;}
+  .band h2{color:#ffffff;font-size:34px;}
+  .band h2 span{color:var(--honey-l);}
+  .band p{color:var(--veil-body);font-size:16px;max-width:460px;}
+
+  /* chips */
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;}
+  .chip{background:rgba(255,255,255,0.08);border:1px solid rgba(214,168,104,0.35);color:var(--honey-l);border-radius:30px;padding:8px 16px;font-size:13px;font-weight:700;}
+
+  /* journey */
+  .journey{background:var(--forest);border-radius:22px;box-shadow:var(--shadow);padding:32px 20px 34px;text-align:center;margin-bottom:22px;}
+  .journey .jl{font-size:12px;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;color:var(--honey-l);margin-bottom:22px;}
+  .jrow{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;}
+  .jstep{width:150px;}
+  .jstep .jd{width:56px;height:56px;border-radius:50%;background:var(--mid);margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-size:24px;}
+  .jstep.on .jd{background:var(--honey);width:64px;height:64px;margin-top:-4px;}
+  .jstep .jt{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--honey-l);}
+  .jstep.on .jt{color:#ffffff;font-weight:700;}
+  .scard{display:flex;align-items:center;gap:18px;background:#ffffff;border-radius:18px;box-shadow:var(--shadow);padding:22px 24px;}
+  .scard .t{font-size:17px;font-weight:700;color:var(--ink);margin-bottom:2px;}
+  .scard .s{font-size:14px;color:var(--ink-l);line-height:1.55;}
+
+  /* pricing */
+  .price{background:var(--forest);border-radius:22px;box-shadow:var(--shadow);padding:34px 34px 32px;color:var(--body-dark);}
+  .price .plab{font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--honey-l);margin-bottom:8px;}
+  .price .big{font-size:40px;font-weight:700;color:var(--honey-l);line-height:1.1;margin-bottom:12px;}
+  .price p{font-size:15px;}
+  .incl{background:var(--tint);border-radius:22px;padding:30px 30px 26px;}
+  .incl .plab{font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);margin-bottom:12px;}
+  .incl ul{list-style:none;}
+  .incl li{padding:8px 0;border-bottom:1px solid rgba(31,61,40,0.12);color:var(--forest-deep);font-weight:700;font-size:15px;}
+  .incl li:last-child{border-bottom:none;}
+  .dep{display:flex;align-items:center;gap:18px;background:#ffffff;border-radius:18px;border-top:4px solid var(--honey);box-shadow:var(--shadow);padding:24px 26px;margin-top:34px;flex-wrap:wrap;}
+  .dep .t{font-size:18px;font-weight:700;color:var(--forest-deep);}
+  .dep .txt{flex:1 1 260px;}
+  .wa{display:inline-flex;align-items:center;gap:10px;margin-top:22px;text-decoration:none;font-size:15px;color:var(--forest-deep);font-weight:700;}
+  .wa i{width:30px;height:30px;border-radius:50%;background:var(--wa);display:inline-flex;align-items:center;justify-content:center;font-style:normal;font-size:15px;}
+
+  /* footer */
+  footer{background:var(--ground);border-radius:22px 22px 0 0;padding:54px 24px 40px;text-align:center;}
+  footer .icons{display:flex;justify-content:center;align-items:flex-end;flex-wrap:wrap;gap:18px 26px;margin-bottom:28px;}
+  footer .icons img{height:44px;width:auto;}
+  footer .logo{width:130px;margin:0 auto 18px;}
+  footer .signoff{color:#ffffff;font-size:17px;font-weight:700;margin-bottom:6px;}
+  footer .dom{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage-pale);margin-bottom:30px;}
+  footer .sig{background:#ffffff;border-radius:18px;overflow:hidden;max-width:640px;margin:0 auto;}
+
+  @media (max-width:900px){
+    .g4{grid-template-columns:repeat(2,1fr);}
+    .g3,.bgrid{grid-template-columns:repeat(2,1fr);}
+    .split{grid-template-columns:1fr;}
+    .circ .ph{width:190px;height:190px;}
+  }
+  @media (max-width:600px){
+    section{padding:60px 0;}
+    .wrap{padding:0 16px;}
+    .hero h1{font-size:36px;}
+    .hero .inner{padding:110px 0 46px;}
+    h2{font-size:28px;}
+    .band h2{font-size:27px;}
+    .g2,.g3,.g4,.bgrid,.circles{grid-template-columns:1fr;}
+    .pbox{flex-direction:column;align-items:flex-start;gap:12px;}
+    .pbox .ico{flex:none;justify-content:flex-start;}
+    .pbox .ti{flex:none;}
+    .inter{padding:60px 22px;}
+    .inter p{font-size:24px;}
+    .jstep{width:120px;}
+    .price .big{font-size:30px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <img class="logo" src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a159cbca7ceea4e5718f77f.png" alt="Barrel Sauna UK">
+  <div class="wrap inner">
+    <div class="dash"></div>
+    <div class="kicker">Barrel Sauna UK</div>
+    <h1>Handbuilt in <span>Wales</span>. Made to order. Built to last.</h1>
+    <p>A Welsh family business with woodworking in our blood, building bespoke outdoor saunas since day one. Every sauna is made to order and installed across the UK and Ireland.</p>
+    <a class="pill" href="https://www.barrelsaunauk.com/secure-your-build">Secure Your Build</a>
+  </div>
+</header>
+
+<!-- BADGES -->
+<div class="badges">
+  <div class="wrap bgrid">
+    <div class="bcard"><div class="disc">&#128104;&#8205;&#128105;&#8205;&#128103;</div><div class="t">Family business</div></div>
+    <div class="bcard"><div class="disc">&#9999;&#65039;</div><div class="t">Made to order</div></div>
+    <div class="bcard"><div class="disc">&#128737;&#65039;</div><div class="t">Built to last</div></div>
+    <div class="bcard"><div class="disc">&#128009;</div><div class="t">Based in Wales</div></div>
+    <div class="bcard"><div class="disc">&#128296;</div><div class="t">UK &amp; Ireland installation</div></div>
+    <div class="bcard"><div class="disc">&#127942;</div><div class="t">Commercial grade quality</div></div>
+  </div>
+</div>
+
+<!-- SIZING -->
+<section>
+  <div class="wrap">
+    <div class="kicker">Sizing &amp; configuration</div>
+    <h2>Made to <span>your</span> spec</h2>
+    <p class="lede">Every sauna is made to order. Choose your length, diameter, and layout.</p>
+    <div class="grid g3">
+      <div class="block"><div class="disc">&#128207;</div><div class="lb">Length</div><div class="hd">From compact 1.8m to grand 6m</div><div class="bd">Choose the length that fits your space and lifestyle, from sauna area only up to a full changing room, porch and large sauna.</div></div>
+      <div class="block"><div class="disc">&#11093;</div><div class="lb">Diameter</div><div class="hd">2m or 2.3m</div><div class="bd">The extra 30cm of diameter increases both bench width and overhead clearance. More usable space when lying down or sitting upright.</div></div>
+      <div class="block"><div class="disc">&#128682;</div><div class="lb">Side entrance</div><div class="hd">From 4.7m upwards</div><div class="bd">From 4.7m upwards, a side entrance can be added inside the sauna.</div></div>
+    </div>
+
+    <div class="circles">
+      <div class="circ"><div class="ph" style="background-image:url('https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a9ff6c5641597c752aab2dd.jpg');" role="img" aria-label="Turned timber coat hooks"></div><div class="cap">Turned timber hooks</div></div>
+      <div class="circ"><div class="ph" style="background-image:url('https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a9ff6c5bfc1456f8c60d149.jpg');" role="img" aria-label="Stainless steel ventilation grille"></div><div class="cap">Stainless ventilation</div></div>
+      <div class="circ"><div class="ph flag" style="background-image:url('https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6ab400c7ec718870e13b1869.png');" role="img" aria-label="Welsh flag"></div><div class="cap">Handbuilt in Wales</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BENCH LAYOUTS -->
+<section class="tint">
+  <div class="wrap">
+    <div class="kicker">Bench layouts</div>
+    <h2>Sit, stretch, <span>share</span></h2>
+    <p class="lede">The layout shapes your experience. Choose how you sit, stretch, and share the heat.</p>
+    <div class="pstack">
+      <div class="pbox"><div class="ico"><div class="disc">&#128260;</div></div><div class="ti">U-shaped</div><div class="bd">Side-placed heater, cleaner lines, and more usable sauna space.</div></div>
+      <div class="pbox"><div class="ico"><div class="disc">&#128207;</div></div><div class="ti">Straight</div><div class="bd">The classic sauna layout. Simple, timeless, and built for stretching out.</div></div>
+      <div class="pbox"><div class="ico"><div class="disc">&#128208;</div></div><div class="ti">L-shaped</div><div class="bd">Ideal for compact saunas. Makes the most of the space without compromising comfort.</div></div>
+      <div class="pbox"><div class="ico"><div class="disc">&#127760;</div></div><div class="ti">Globe window seating</div><div class="bd">Panoramic views into the sauna, with a middle plank that drops in or out in seconds.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WINDOWS -->
+<section class="dark">
+  <div class="wrap">
+    <div class="kicker">Sauna windows</div>
+    <h2>Choose your <span>view</span></h2>
+    <p class="lede">Double glazed and heat resistant as standard. Choose the back wall that suits you.</p>
+    <div class="grid g3">
+      <div class="card"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6aba4756c13d4373c2dc9120.png" alt="Full wood back wall"><div class="tab">Timber</div><div class="ex">A full wood back wall, no glass.</div></div>
+      <div class="card"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a7850679a9c7792ea507671.jpg" alt="Two vertical double glazed windows"><div class="tab">Vertical</div><div class="ex">Two vertical double glazed panels.</div></div>
+      <div class="card"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a7852109994d35aa0e208d3.jpg" alt="Half moon back wall window"><div class="tab">Half moon</div><div class="ex">A classic curved window, with a timber cover option for added privacy.</div></div>
+      <div class="card"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a774d8f5a64f2b567b78ab6.jpg" alt="Full flat glass back wall"><div class="tab">Flat glass</div><div class="ex">A full circular glass back wall. Floor to ceiling views from inside the sauna.</div></div>
+      <div class="card"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a7850cb9a9c7792ea50e3e6.jpg" alt="Tinted globe window"><div class="tab">Tinted</div><div class="ex">Tinted glass lets you see out while maintaining privacy from outside.</div></div>
+      <div class="card"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a7850b003343f290f69b50f.jpg" alt="Blackout globe window"><div class="tab">Blackout</div><div class="ex">Privacy glass, with no view in.</div></div>
+    </div>
+
+    <h3>Front wall</h3>
+    <p class="lede" style="margin-bottom:24px;">Every sauna comes with a door. What surrounds it is up to you.</p>
+    <div class="grid g3">
+      <div class="card"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6aba4883b5e520ac1734dd9e.png" alt="Classic secure sauna door"><div class="tab">Door</div><div class="ex">The classic secure sauna door, included as standard.</div></div>
+      <div class="card"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6aba4a05be703c7b303ebe40.jpeg" alt="Full glass sauna door"><div class="tab">Glass door</div><div class="ex">Floor to ceiling glass, maximum light.</div></div>
+      <div class="card"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a9ffe8ed63e08439cc2f9ad.jpeg" alt="Full glass facade"><div class="tab">Facade</div><div class="ex">Glass across the entire front wall. The most open, light-filled front end we offer.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERLUDE -->
+<div class="interlude">
+  <div class="wrap">
+    <div class="inter"><p>Welsh family business. Handmade and made to order. <span>Designed around you.</span> Built to last.</p></div>
+  </div>
+</div>
+
+<!-- CHANGING ROOM -->
+<section>
+  <div class="wrap">
+    <div class="kicker">The changing room</div>
+    <h2>A heat trap, a rest zone, <span>a second room</span></h2>
+    <p class="lede">More than just a changing space. Step out, cool down, and take in the view.</p>
+    <div class="split">
+      <div class="card"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a9e5427b81a3502a8958dbf.jpg" alt="Barrel sauna porch entrance in a garden"><div class="tab">Porch</div><div class="ex">A 0.6m deep porch, with backrests, armrests and drinks holders if you want them.</div></div>
+      <div class="grid g2">
+        <div class="block"><div class="disc sm">&#128682;</div><div class="lb">Heat trap</div><div class="bd">Two doors between the outside and the sauna keep heat in and cold out.</div></div>
+        <div class="block"><div class="disc sm">&#129529;</div><div class="lb">Storage</div><div class="bd">Store firewood, towels, or kit neatly out of the way beneath the bench.</div></div>
+        <div class="block"><div class="disc sm">&#129496;</div><div class="lb">Rest &amp; recovery</div><div class="bd">The perfect place to cool down between sessions. Sit, breathe, go again.</div></div>
+        <div class="block"><div class="disc sm">&#128208;</div><div class="lb">Your size</div><div class="bd">Standard 1m length, made bigger on request.</div></div>
+      </div>
+    </div>
+
+    <h3>Lighting &amp; solar</h3>
+    <div class="grid g3" style="margin-top:20px;">
+      <div class="block"><div class="disc sm">&#128161;</div><div class="lb">Sauna</div><div class="bd">Heat-rated, dimmable LEDs at low level for a soft, indirect glow.</div></div>
+      <div class="block"><div class="disc sm">&#127775;</div><div class="lb">Porch &amp; changing room</div><div class="bd">Warm, welcoming light that guides you in and eases the shift into relaxation.</div></div>
+      <div class="block"><div class="disc sm">&#9728;&#65039;</div><div class="lb">Solar</div><div class="bd">Power your entire sauna lighting off-grid with a roof-mounted solar panel.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HEATERS -->
+<section class="dark">
+  <div class="wrap">
+    <div class="kicker">Heater options</div>
+    <h2>Choose your <span>heat</span></h2>
+    <p class="lede">Every sauna is built bespoke. Choose the heat source that suits your lifestyle.</p>
+    <div class="split">
+      <div class="grid g2">
+        <div class="block"><div class="disc sm">&#128268;</div><div class="lb">Electric switch</div><div class="bd">Simple, reliable, no fuss. Just turn it on and go.</div></div>
+        <div class="block"><div class="disc sm">&#128241;</div><div class="lb">Electric WiFi</div><div class="bd">Preheat your sauna from anywhere with the Harvia app. Our top pick.</div></div>
+        <div class="block"><div class="disc sm">&#128293;</div><div class="lb">Wood internal feed</div><div class="bd">Load the fire from inside. The classic wood burning sauna experience.</div></div>
+        <div class="block"><div class="disc sm">&#129717;</div><div class="lb">Wood external feed</div><div class="bd">Fuel is loaded from the back wall outside, keeping smoke out of the sauna.</div></div>
+        <div class="block" style="grid-column:1 / -1;"><div class="disc sm">&#9832;&#65039;</div><div class="lb">Hybrid</div><div class="bd">The best of both worlds, wood burning and electric in one sauna. Have something specific in mind? Just let us know.</div></div>
+      </div>
+      <div class="card"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a7851cd9a9c7792ea55e0ef.jpg" alt="Barrel sauna back wall with external feed wood burner"><div class="tab">Wood</div><div class="ex">An external feed wood burner under a full glass back wall.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DETAILS BAND -->
+<div class="band">
+  <div class="wrap">
+    <h2>Handcrafted <span>in Wales</span></h2>
+    <p>Thermowood bound in stainless steel bands, with stainless components throughout. Every sauna is made to order in our Welsh workshop.</p>
+  </div>
+</div>
+
+<!-- MORE THAN SAUNAS -->
+<section>
+  <div class="wrap">
+    <div class="kicker">The full range</div>
+    <h2>More than just <span>saunas</span></h2>
+    <p class="lede">We build a full range of outdoor wellness and leisure structures, all designed to complement each other on one shared deck.</p>
+    <div class="pstack">
+      <div class="pbox"><div class="ico"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6ab0ee11de8ed1c29f9e1345.png" alt="Glamping pod"></div><div class="ti">Glamping pods</div><div class="bd">Handbuilt to any size, for the garden, a holiday let or off-grid. No planning permission in most cases.</div></div>
+      <div class="pbox"><div class="ico"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6ab0ee14ff484614db752941.png" alt="Shepherd's hut"></div><div class="ti">Garden huts</div><div class="bd">Built in the same workshop as our saunas. Same joinery, same attention to detail, same materials.</div></div>
+      <div class="pbox"><div class="ico"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6ab0ee1430b0f957ccb86d28.png" alt="Hot tub"></div><div class="ti">Hot tubs</div><div class="bd">Thermowood hot tubs with air and jacuzzi jets, LED lighting and an insulated lid. Wood-fired or electric.</div></div>
+      <div class="pbox"><div class="ico"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6ab0ee0cff484614db7528b9.png" alt="Double Dipper"></div><div class="ti">Double Dippers</div><div class="bd">Two-person cold plunge. Side by side contrast therapy, built to match your sauna.</div></div>
+      <div class="pbox"><div class="ico"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6ab0ee11ff484614db752909.png" alt="Ice bath"></div><div class="ti">Ice baths</div><div class="bd">The Single Dipper, a compact cold plunge for one. Perfect alongside any sauna.</div></div>
+      <div class="pbox"><div class="ico"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6ab0ee0cff484614db7528ad.png" alt="Barrel shower"></div><div class="ti">Barrel showers</div><div class="bd">Designed to sit alongside your sauna on a shared deck.</div></div>
+    </div>
+    <div class="grid g4" style="margin-top:34px;">
+      <div class="card"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a994bc9174710d6163e3c4b.png" alt="Thermowood hot tub"><div class="tab">Hot tubs</div><div class="ex">Classic aesthetic, modern performance.</div></div>
+      <div class="card"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6aa154a69416bfd5312819bc.jpg" alt="Double Dipper cold plunge"><div class="tab">Ice baths</div><div class="ex">Hot and cold contrast, side by side.</div></div>
+      <div class="card"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6aa1597bd953a0128b482fe8.jpg" alt="Eco glamping pod"><div class="tab">Glamping</div><div class="ex">Extra income or a personal retreat.</div></div>
+      <div class="card"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6aa526c7df2d0155532ed538.jpg" alt="Barrel shower"><div class="tab">Showers</div><div class="ex">To finish the full wellness setup.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MOBILE AND INSTALLATION -->
+<section class="dark">
+  <div class="wrap">
+    <div class="kicker">Mobile saunas</div>
+    <h2>Built to <span>move</span></h2>
+    <p class="lede">Welsh-built trailers, made entirely in-house from frame to finish, and DVSA IVA tested for UK roads.</p>
+    <div class="split">
+      <div class="card"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6abcacdef88ee1436cafbcda.png" alt="Mobile sauna on a trailer"><div class="tab">Mobile</div><div class="ex">Each trailer is bespoke, designed to integrate with our saunas.</div></div>
+      <div>
+        <div class="grid g2">
+          <div class="block"><div class="disc sm">&#128296;</div><div class="lb">Installation</div><div class="bd">Our team hand-balls everything on site and builds in place. No access too tricky.</div></div>
+          <div class="block"><div class="disc sm">&#127959;&#65039;</div><div class="lb">Crane lift</div><div class="bd">For local jobs we use a hiab to lift over drives and obstacles.</div></div>
+          <div class="block" style="grid-column:1 / -1;"><div class="disc sm">&#128506;&#65039;</div><div class="lb">Across the UK</div><div class="bd">Completed jobs across England, Scotland, Ireland and the Isle of Man. Narrow lanes, tight gardens, elevated plots, we've done it all.</div></div>
+        </div>
+        <div class="chips">
+          <span class="chip">Galvanised</span>
+          <span class="chip">UK IVA tested</span>
+          <span class="chip">Braking</span>
+          <span class="chip">Steel stabilisers</span>
+          <span class="chip">Buffalo board base</span>
+          <span class="chip">Built-in storage</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY AND PRICING -->
+<section>
+  <div class="wrap">
+    <div class="kicker">From here</div>
+    <h2>What happens <span>next</span></h2>
+    <div class="journey">
+      <div class="jl">Your journey</div>
+      <div class="jrow">
+        <div class="jstep on"><div class="jd">&#129309;</div><div class="jt">Deposit</div></div>
+        <div class="jstep"><div class="jd">&#128221;</div><div class="jt">Spec call</div></div>
+        <div class="jstep"><div class="jd">&#128296;</div><div class="jt">In build</div></div>
+        <div class="jstep"><div class="jd">&#127968;</div><div class="jt">Built at yours</div></div>
+      </div>
+    </div>
+    <div class="grid g2">
+      <div class="scard"><div class="disc">&#129309;</div><div><div class="t">Deposit</div><div class="s">A &pound;500 deposit secures your build spot.</div></div></div>
+      <div class="scard"><div class="disc">&#128221;</div><div><div class="t">Spec confirmed</div><div class="s">We lock in your full specification and issue your build invoice.</div></div></div>
+      <div class="scard"><div class="disc">&#128296;</div><div><div class="t">Build queue</div><div class="s">Your sauna is scheduled into our Welsh workshop and we give you a firm timeline.</div></div></div>
+      <div class="scard"><div class="disc">&#127968;</div><div><div class="t">Built on site</div><div class="s">We build at your home, on the base you have ready.</div></div></div>
+    </div>
+
+    <h3>Where your build starts</h3>
+    <p class="lede" style="margin-bottom:24px;">Every sauna is made to order, so your estimate is built around your configuration.</p>
+    <div class="split">
+      <div class="price">
+        <div class="plab">Thermowood barrel saunas</div>
+        <div class="big">&pound;5,250 to &pound;13,495 + VAT</div>
+        <p>From the compact 1.8m to the grand 6m. Prices are for the base sauna before upgrades. Diameter, windows, heaters, lighting and accessories are priced separately, as are delivery and installation.</p>
+      </div>
+      <div class="incl">
+        <div class="plab">Included with every sauna</div>
+        <ul>
+          <li>Volcanic sauna stones</li>
+          <li>Stainless steel components</li>
+          <li>Base roof shingles</li>
+          <li>Standard secure door</li>
+          <li>Standard flush entrance</li>
+          <li>Structural warranty</li>
+        </ul>
+      </div>
+    </div>
+    <div class="dep">
+      <div class="disc">&#129309;</div>
+      <div class="txt"><div class="t">Securing your build spot</div>A &pound;500 non-refundable deposit secures your place in the build queue.</div>
+      <a class="pill" href="https://www.barrelsaunauk.com/secure-your-build">Secure Your Build</a>
+    </div>
+    <a class="wa" href="https://wa.me/447360274142"><i>&#128172;</i>Or just message us on WhatsApp</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="icons">
+    <img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6ab0ee11ff484614db7528f5.png" alt="Glamping pod">
+    <img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6ab0ee14de8ed1c29f9e137f.png" alt="Shepherd's hut">
+    <img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6ab0ee11bdaa5e26a9690935.png" alt="Hot tub">
+    <img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6ab0ee14bdaa5e26a969097d.png" alt="Mobile sauna">
+    <img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6ab0ee0cde8ed1c29f9e1305.png" alt="Barrel sauna">
+    <img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6ab0ee0cbdaa5e26a96908f0.png" alt="Double Dipper">
+  </div>
+  <img class="logo" src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a159cbca7ceea4e5718f77f.png" alt="Barrel Sauna UK">
+  <div class="signoff">The Barrel Sauna UK Team</div>
+  <div class="dom">barrelsaunauk.com &nbsp;&middot;&nbsp; Handcrafted in Wales</div>
+  <div class="sig"><a href="https://www.barrelsaunauk.com"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a96e859fac7854efe0a2fdc.jpeg" alt="Barrel Sauna UK, bespoke, made to order"></a></div>
+</footer>
+
+</body>
+</html>
