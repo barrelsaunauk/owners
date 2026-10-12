@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electric Hot Tub Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#16261C;--deep:#1F3D28;--forest:#2B5336;--mid:#417C51;--sage:#50795F;--sagepale:#8fae86;
+  --honey:#C08B41;--honeylight:#D6A868;--tint:#eef4ef;--tint2:#dbe7dd;--wa:#31D24F;--white:#ffffff;
+  --line:rgba(31,61,40,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Raleway,Arial,sans-serif;font-weight:400;color:var(--deep);background:var(--white);line-height:1.6;font-size:17px}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.kicker{font-weight:700;letter-spacing:.22em;text-transform:uppercase;font-size:12px;color:var(--honey)}
+.dark .kicker,.hero .kicker,.band .kicker{color:var(--honeylight)}
+h1,h2,h3{font-weight:700;line-height:1.15}
+h1{font-size:clamp(32px,5vw,54px);color:var(--white)}
+h2{font-size:clamp(26px,3.6vw,38px);color:var(--deep);margin:10px 0 16px}
+.dark h2,.band h2{color:var(--white)}
+.acc{color:var(--honey)}
+.dark .acc,.hero .acc,.band .acc{color:var(--honeylight)}
+p.lead{font-size:18px;max-width:680px}
+section{padding:80px 0}
+.dark{background:var(--forest);color:#e7efe8}
+.tintbg{background:var(--tint)}
+
+/* hero: image shown whole, text over it on wide screens */
+.hero{position:relative;background:var(--ground)}
+.hero img{width:100%;height:auto}
+.hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,38,28,.15) 0%,rgba(22,38,28,.55) 55%,rgba(22,38,28,.88) 100%)}
+.hero .text{position:absolute;left:0;right:0;bottom:0;padding:0 0 56px}
+.hero p{color:#e7efe8;max-width:600px;margin-top:14px;font-size:18px}
+.logo{position:absolute;top:22px;left:24px;width:150px}
+
+/* lift cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:0 10px 30px rgba(22,38,28,.08)}
+.card .ct{font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:13px;color:var(--deep);margin-bottom:8px}
+.card p{font-size:16px;color:#2f4a37}
+.pill{display:flex;align-items:center;gap:18px;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:14px 26px 14px 14px;box-shadow:0 10px 30px rgba(22,38,28,.08);margin-top:34px;max-width:620px}
+.pill img{height:64px;width:auto}
+.pill .ct{font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:13px}
+.pill p{font-size:15px;color:var(--sage)}
+
+/* route diagram */
+.split{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center;margin-top:30px}
+.diagram{background:var(--white);border-radius:18px;padding:18px}
+.diagram svg{width:100%;height:auto;display:block}
+.steps{list-style:none}
+.steps li{display:flex;gap:16px;margin-bottom:20px}
+.disc{flex:0 0 38px;height:38px;border-radius:50%;background:var(--honeylight);color:var(--ground);font-weight:700;display:flex;align-items:center;justify-content:center}
+.steps .t{font-weight:700;color:var(--white)}
+
+/* spec table */
+.spec{width:100%;border-collapse:separate;border-spacing:0;margin-top:30px;background:var(--white);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(22,38,28,.08)}
+.spec td{padding:18px 22px;border-bottom:1px solid var(--line);vertical-align:top;font-size:16px}
+.spec tr:last-child td{border-bottom:0}
+.spec td:first-child{font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:12px;color:var(--sage);width:30%;padding-top:21px}
+
+/* circle insert */
+.circle{display:flex;align-items:center;gap:22px;margin-top:40px}
+.circle img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:4px solid var(--white);box-shadow:0 10px 30px rgba(22,38,28,.15)}
+.circle .cap{font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:12px;color:var(--sage);max-width:300px;line-height:1.7}
+
+/* details band */
+.band{position:relative;background:var(--ground)}
+.band img{width:100%;height:auto}
+.band .veil{position:absolute;inset:0;background:rgba(22,38,28,.62)}
+.band .text{position:absolute;inset:0;display:flex;align-items:center}
+.band p{color:#e7efe8;max-width:560px}
+
+/* checklist */
+.ticks{list-style:none;margin-top:22px}
+.ticks li{padding:14px 0 14px 40px;border-bottom:1px solid var(--line);position:relative}
+.ticks li:before{content:"";position:absolute;left:0;top:15px;width:24px;height:24px;border-radius:50%;background:var(--honey)}
+.ticks li:after{content:"";position:absolute;left:8px;top:20px;width:6px;height:11px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.btn{display:inline-block;text-decoration:none;font-weight:700;border-radius:999px;padding:15px 30px;font-size:15px}
+.btn.honey{background:var(--honey);color:#fff}
+.btn.wa{background:var(--wa);color:#fff}
+.btn.line{border:1px solid var(--deep);color:var(--deep)}
+
+/* footer */
+footer{background:var(--ground);color:#e7efe8;padding:70px 0 80px;border-radius:28px 28px 0 0}
+footer .sig{background:#fff;border-radius:18px;padding:12px;max-width:520px;margin-top:26px}
+footer .sig img{width:100%;height:auto;border-radius:10px}
+footer .fine-print{font-size:13px;color:var(--sagepale);margin-top:26px}
+
+@media (max-width:820px){
+  body{font-size:16px}
+  section{padding:56px 0}
+  .wrap{padding:0 16px}
+  .cards{grid-template-columns:1fr}
+  .split{grid-template-columns:1fr}
+  .hero .text,.band .text{position:static;padding:28px 0 36px;background:var(--ground)}
+  .hero .veil,.band .veil{display:none}
+  .logo{width:110px;top:14px;left:16px}
+  .pill{border-radius:18px}
+  .spec td{display:block;width:100%!important;border-bottom:0;padding:6px 18px}
+  .spec td:first-child{padding-top:18px}
+  .spec tr{display:block;border-bottom:1px solid var(--line);padding-bottom:12px}
+  .spec tr:last-child{border-bottom:0}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a8561324aaffc55cddd1f1c.png" alt="Barrel Sauna UK hot tub and saunas in a garden">
+  <div class="veil"></div>
+  <div class="text">
+    <div class="wrap">
+      <div class="kicker">Owner's handbook · Electrical</div>
+      <h1>Connecting your <span class="acc">electric</span> hot tub</h1>
+      <p>For Smart Electric and heat pump builds. Pass this guide to your electrician before your tub arrives, so the supply is planned and your garden stays exactly as you want it.</p>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">What sits where</div>
+    <h2>Everything electrical is in <span class="acc">one</span> place</h2>
+    <p class="lead">Your tub is built so there is a single connection point. Nothing needs wiring around the outside of the tub, and no cable has to cross a patio or lawn.</p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="ct">The equipment bay</div>
+        <p>The heater, the jet pump and the Balboa control box sit together inside the cladding, behind one service door on one side of the tub. This is where the supply connects.</p>
+      </div>
+      <div class="card">
+        <div class="ct">The heat pump</div>
+        <p>Where a heat pump is fitted, it is a separate unit that stands on the ground beside the tub on the service side, connected to the tub by its water pipes.</p>
+      </div>
+      <div class="card">
+        <div class="ct">Your choice of side</div>
+        <p>When we position your tub we turn it so the service door and heat pump face whichever side is closest to your supply. Just let us know which side suits you.</p>
+      </div>
+    </div>
+
+    <div class="pill">
+      <img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6ab0ee1430b0f957ccb86d28.png" alt="Hot tub line drawing">
+      <div>
+        <div class="ct">Circle and square electric tubs</div>
+        <p>Balboa heater and control system, jets, LED lighting and the optional 7kW heat pump.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="kicker">Planning the cable route</div>
+    <h2>From your board to the tub, <span class="acc">out of sight</span></h2>
+    <div class="split">
+      <div class="diagram">
+        <svg viewBox="0 0 520 380" xmlns="http://www.w3.org/2000/svg" font-family="Raleway, Arial, sans-serif">
+          <rect x="0" y="0" width="520" height="380" rx="12" fill="#eef4ef"/>
+          <rect x="20" y="20" width="150" height="90" rx="6" fill="#ffffff" stroke="#1F3D28" stroke-width="2"/>
+          <text x="95" y="60" text-anchor="middle" font-size="14" font-weight="700" fill="#1F3D28">HOUSE</text>
+          <rect x="132" y="80" width="26" height="20" rx="3" fill="#C08B41"/>
+          <text x="95" y="96" text-anchor="middle" font-size="11" fill="#50795F">fuse board</text>
+          <rect x="190" y="130" width="160" height="110" rx="6" fill="#dbe7dd" stroke="#8fae86" stroke-width="2" stroke-dasharray="6 5"/>
+          <text x="270" y="190" text-anchor="middle" font-size="14" font-weight="700" fill="#50795F">PATIO</text>
+          <path d="M158 92 L480 92 L480 300 L430 300" fill="none" stroke="#C08B41" stroke-width="4" stroke-dasharray="10 6"/>
+          <text x="330" y="84" text-anchor="middle" font-size="11" fill="#1F3D28">buried route along the garden edge</text>
+          <rect x="300" y="262" width="120" height="96" rx="8" fill="#ffffff" stroke="#1F3D28" stroke-width="2"/>
+          <text x="360" y="306" text-anchor="middle" font-size="13" font-weight="700" fill="#1F3D28">HOT TUB</text>
+          <rect x="414" y="270" width="8" height="80" fill="#C08B41"/>
+          <text x="360" y="324" text-anchor="middle" font-size="10" fill="#50795F">service side</text>
+          <rect x="436" y="318" width="54" height="40" rx="5" fill="#417C51"/>
+          <text x="463" y="342" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">PUMP</text>
+          <circle cx="430" cy="300" r="9" fill="#1F3D28"/>
+          <text x="476" y="287" text-anchor="end" font-size="10" fill="#1F3D28">isolator</text>
+        </svg>
+      </div>
+      <ol class="steps">
+        <li><span class="disc">1</span><div><div class="t">One cable from your board</div>A single dedicated supply runs from your consumer unit to the tub. Your electrician supplies and sizes it for the length of the run.</div></li>
+        <li><span class="disc">2</span><div><div class="t">Routed round, not across</div>Buried armoured cable or a duct can follow the edge of the garden or a wall, so a finished patio or new lawn stays untouched.</div></li>
+        <li><span class="disc">3</span><div><div class="t">An isolator beside the tub</div>A weatherproof switch within sight of the tub, then a short tail into the equipment bay from underneath.</div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">For your electrician</div>
+    <h2>Connection <span class="acc">specification</span></h2>
+    <p class="lead">Hand this table to your electrician. The exact ratings for your tub are on the data plate inside the service door, and those always take priority.</p>
+    <table class="spec">
+      <tr><td>Connection</td><td>Hardwired. Electric and heat pump tubs are not fitted with a plug, as the load is too high for a 13A socket.</td></tr>
+      <tr><td>Circuit</td><td>A dedicated circuit from the consumer unit, with nothing else connected to it.</td></tr>
+      <tr><td>Supply rating</td><td>Taken from the data plate inside the service door. Your electrician sizes the circuit so the heater, jets and lights can all run together.</td></tr>
+      <tr><td>Protection</td><td>30mA RCD, Type A, with a curve C MCB to handle pump start up.</td></tr>
+      <tr><td>Cable</td><td>Sized by your electrician for the route length and installation method. Armoured cable for buried runs, flexible H07RN-F for the final tail into the equipment bay.</td></tr>
+      <tr><td>Isolator</td><td>Weatherproof rotary isolator, IP54 or better, within sight of the tub, 1.5 to 3m away and outside zones 0 and 1.</td></tr>
+      <tr><td>Heat pump</td><td>Allow for the heat pump's power at the tub. Its own data plate confirms its rating and connection.</td></tr>
+      <tr><td>Earthing</td><td>Correct earthing with supplementary bonding to any accessible metalwork around the tub.</td></tr>
+      <tr><td>Standards</td><td>All work to BS 7671 and Part P of the Building Regulations, by a registered electrician (NICEIC, NAPIT, ECA or equivalent).</td></tr>
+    </table>
+
+    <div class="circle">
+      <img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a9ffd1c641597c752ab184f.jpg" alt="Barrel Sauna UK nameplate">
+      <div class="cap">Built and checked in our Welsh workshop before it leaves us</div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a78535b03343f290f6fc3ce.jpg" alt="Stainless hydro jets, close up">
+  <div class="veil"></div>
+  <div class="text">
+    <div class="wrap">
+      <div class="kicker">The details</div>
+      <h2>Comfort in the <span class="acc">details</span></h2>
+      <p>Stainless jets, an insulated shell and a thermowood finish, built to sit outside through a Welsh winter and hold its heat.</p>
+    </div>
+  </div>
+</div>
+
+<section class="tintbg">
+  <div class="wrap">
+    <div class="kicker">Before first switch on</div>
+    <h2>A quick <span class="acc">checklist</span></h2>
+    <ul class="ticks">
+      <li>Fill the tub so the water sits above every jet and intake. A pump must never run dry.</li>
+      <li>Check all pipework and unions for leaks.</li>
+      <li>Test the RCD using its test button.</li>
+      <li>Switch on. The control system runs a priming sequence for a few minutes before it heats. This is normal.</li>
+      <li>Set your temperature on the panel and briefly test the jets and lights.</li>
+    </ul>
+    <div class="btns">
+      <a class="btn line" href="https://www.balboawater.com">Balboa control systems</a>
+      <a class="btn wa" href="https://wa.me/447360274142">WhatsApp us</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="kicker">Questions about your tub</div>
+    <h2 style="color:#fff;margin-top:10px">We're here to <span class="acc" style="color:var(--honeylight)">help</span></h2>
+    <p>Email info@barrelsaunauk.com or message us on WhatsApp on +44 7360 274142.</p>
+    <p style="margin-top:22px">The Barrel Sauna UK Team</p>
+    <div class="sig"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a96e859fac7854efe0a2fdc.jpeg" alt="Barrel Sauna UK"></div>
+    <p class="fine-print">Electrical work must be carried out by a qualified electrician. Barrel Sauna UK does not carry out electrical connections.</p>
+  </div>
+</footer>
+
+</body>
+</html>
