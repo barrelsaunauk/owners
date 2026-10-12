@@ -32,7 +32,8 @@ section{padding:80px 0}
 
 /* hero: image shown whole, text over it on wide screens */
 .hero{position:relative;background:var(--ground)}
-.hero img{width:100%;height:auto}
+.hero{height:clamp(420px,62vh,600px);overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:center}
 .hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,38,28,.15) 0%,rgba(22,38,28,.55) 55%,rgba(22,38,28,.88) 100%)}
 .hero .text{position:absolute;left:0;right:0;bottom:0;padding:0 0 56px}
 .hero p{color:#e7efe8;max-width:600px;margin-top:14px;font-size:18px}
@@ -70,7 +71,8 @@ section{padding:80px 0}
 
 /* details band */
 .band{position:relative;background:var(--ground)}
-.band img{width:100%;height:auto}
+.band{height:clamp(320px,45vh,440px);overflow:hidden}
+.band img{width:100%;height:100%;object-fit:cover;object-position:center}
 .band .veil{position:absolute;inset:0;background:rgba(22,38,28,.62)}
 .band .text{position:absolute;inset:0;display:flex;align-items:center}
 .band p{color:#e7efe8;max-width:560px}
@@ -98,8 +100,9 @@ footer .fine-print{font-size:13px;color:var(--sagepale);margin-top:26px}
   .wrap{padding:0 16px}
   .cards{grid-template-columns:1fr}
   .split{grid-template-columns:1fr}
-  .hero .text,.band .text{position:static;padding:28px 0 36px;background:var(--ground)}
-  .hero .veil,.band .veil{display:none}
+  .hero{height:440px}
+  .hero .text{padding:0 0 32px}
+  .band{height:360px}
   .logo{width:110px;top:14px;left:16px}
   .pill{border-radius:18px}
   .spec td{display:block;width:100%!important;border-bottom:0;padding:6px 18px}
@@ -112,7 +115,7 @@ footer .fine-print{font-size:13px;color:var(--sagepale);margin-top:26px}
 <body>
 
 <header class="hero">
-  <img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a9e5427b81a3502a8958dbf.jpg" alt="Barrel Sauna UK sauna in a garden">
+  <img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6aca20fbbd6bb710ca2907ac.jpg" alt="Barrel Sauna UK sauna">
   <div class="veil"></div>
   <div class="text">
     <div class="wrap">
@@ -193,6 +196,7 @@ footer .fine-print{font-size:13px;color:var(--sagepale);margin-top:26px}
     <h2>Connection <span class="acc">specification</span></h2>
     <p class="lead">Figures below are for a 9kW pillar heater with digital panel control. The heater's own installation manual and rating plate always take priority.</p>
     <table class="spec">
+      <tr><td>Sauna size</td><td>A 9kW heater suits a hot room of 8 to 14m³, so it is matched to the size of your sauna.</td></tr>
       <tr><td>Connection</td><td>Hardwired. A sauna heater is never connected by a plug.</td></tr>
       <tr><td>Circuit</td><td>A dedicated circuit from the consumer unit, separate from any hot tub or garden supply.</td></tr>
       <tr><td>Single phase</td><td>230V 1N. Supply cable 3 x 10mm², drawing around 39A at full power.</td></tr>
@@ -201,7 +205,7 @@ footer .fine-print{font-size:13px;color:var(--sagepale);margin-top:26px}
       <tr><td>Cable</td><td>Armoured cable, run along a wall or fence where possible. Inside the hot room, cable must be rated for sauna temperatures.</td></tr>
       <tr><td>Isolator</td><td>Weatherproof isolator outside the sauna, on the heater side.</td></tr>
       <tr><td>Lighting</td><td>The heater's control unit can also switch the sauna light, up to 100W.</td></tr>
-      <tr><td>Standards</td><td>All work to BS 7671 and Part P of the Building Regulations, by a registered electrician (NICEIC, NAPIT, ECA or equivalent).</td></tr>
+      <tr><td>Standards</td><td>All work to BS 7671, including Section 703 for rooms containing sauna heaters, and Part P of the Building Regulations, by a registered electrician (NICEIC, NAPIT, ECA or equivalent).</td></tr>
     </table>
 
     <div class="circle">
@@ -212,7 +216,7 @@ footer .fine-print{font-size:13px;color:var(--sagepale);margin-top:26px}
 </section>
 
 <div class="band">
-  <img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6aa00cb4f44f6ea72fcb18fa.png" alt="Stainless steel band on thermowood, close up">
+  <img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6aca25634770fb500bcf3073.jpg" alt="Barrel Sauna UK sauna outdoors">
   <div class="veil"></div>
   <div class="text">
     <div class="wrap">
@@ -233,19 +237,19 @@ footer .fine-print{font-size:13px;color:var(--sagepale);margin-top:26px}
       <li>Test the RCD using its test button.</li>
       <li>Switch on at the panel and set your temperature. The first heat can give off a slight smell as the heater beds in. This is normal.</li>
       <li>Keep the door closed and the vents open while the sauna heats.</li>
+      <li>Keep your electrician's installation certificate with this guide. It keeps your warranty valid.</li>
     </ul>
     <div class="btns">
       <a class="btn line" href="https://www.harvia.com/en/products/HPC904XE/cilindro-pc90xe-90-kw-steel">Heater manual and data</a>
-      <a class="btn wa" href="https://wa.me/447360274142">WhatsApp us</a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div class="kicker">Questions about your sauna</div>
-    <h2 style="color:#fff;margin-top:10px">We're here to <span class="acc" style="color:var(--honeylight)">help</span></h2>
-    <p>Email info@barrelsaunauk.com or message us on WhatsApp on +44 7360 274142.</p>
+    <div class="kicker">Your new sauna</div>
+    <h2 style="color:#fff;margin-top:10px">Made to be <span class="acc" style="color:var(--honeylight)">enjoyed</span></h2>
+    <p>Everything your electrician needs is in this guide, on the heater's rating plate and in its installation manual.</p>
     <p style="margin-top:22px">The Barrel Sauna UK Team</p>
     <div class="sig"><img src="https://assets.cdn.filesafe.space/J378Bt0d7JvG2rXks3zo/media/6a96e859fac7854efe0a2fdc.jpeg" alt="Barrel Sauna UK"></div>
     <p class="fine-print">Electrical work must be carried out by a qualified electrician. Barrel Sauna UK does not carry out electrical connections.</p>
